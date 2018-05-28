@@ -1,26 +1,31 @@
 <?xml version='1.0' encoding='utf-8'?>
 <plugin id="com.danishin.detect-mock-location" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
-    <name>detectmocklocation</name>
-     <description>Detect Mocked Location</description>
+    <name>DetectMockLocation</name>
+     <description>Detect Mock Location in Android</description>
      <license>Apache 2.0</license>
      <author>Daniel Shin</author>
+  
      <engines>
         <engine name="cordova" version=">=3.0.0" />
      </engines>
+  
     <js-module name="detectmocklocation" src="www/detectmocklocation.js">
         <clobbers target="window.plugins.detectmocklocation" />
     </js-module>
+  
     <platform name="android">
         <config-file parent="/*" target="res/xml/config.xml">
             <feature name="DetectMockLocation">
                 <param name="android-package" value="com.danishin.detectmocklocation.DetectMockLocation" />
             </feature>
         </config-file>
+      
         <config-file parent="/*" target="AndroidManifest.xml">
             <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
             <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
             <uses-feature android:name="android.hardware.location.gps" />
         </config-file>
+      
         <source-file src="src/android/DetectMockLocation.java" target-dir="src/com/danishin/detectmocklocation/" />
     </platform>
 </plugin>
