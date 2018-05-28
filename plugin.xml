@@ -9,8 +9,8 @@
         <engine name="cordova" version=">=3.0.0" />
      </engines>
   
-    <js-module name="detectmocklocation" src="www/detectmocklocation.js">
-        <clobbers target="window.plugins.detectmocklocation" />
+    <js-module src="www/detectmocklocation.js" name="detectmocklocation">
+        <merges target="cordova.plugins.detectmocklocation" />
     </js-module>
   
     <platform name="android">
