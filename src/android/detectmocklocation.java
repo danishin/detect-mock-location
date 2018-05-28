@@ -18,7 +18,7 @@ import org.json.JSONObject;
 public class detectmocklocation extends CordovaPlugin {
   private static final String TAG = "DetectMockLocation";
   
-  private static CordovaInterface cordova;
+  private CordovaInterface cordova;
   
   @Override
   public void initialize(CordovaInterface cordova, CordovaWebView webView) {
@@ -44,7 +44,7 @@ public class detectmocklocation extends CordovaPlugin {
       /* Build version < 18 */
       boolean allowMockLocationIsEnabled = !android.provider.Settings.Secure.getString(_cordovaActivity.getApplicationContext().getContentResolver(), Secure.ALLOW_MOCK_LOCATION).equals("0");
       
-      Log.d(TAG, "AllowMockLocationIsEnabled: " + allowMockLocationIsEnabled)
+      Log.d(TAG, "AllowMockLocationIsEnabled: " + allowMockLocationIsEnabled);
       
       callbackContext.success(allowMockLocationIsEnabled);
     } else {
@@ -53,11 +53,11 @@ public class detectmocklocation extends CordovaPlugin {
       
       LocationListener locationListener = new LocationListener() {
         public void onLocationChanged(Location location) {
-          Log.d(TAG, String.format("onLocationChanged: %s", location.toString()))
+          Log.d(TAG, String.format("onLocationChanged: %s", location.toString()));
           
           boolean locationIsFromMockProvider = location.isFromMockProvider();
           
-          Log.d(TAG, "LocationIsFromMockProvider: " + locationIsFromMockProvider)
+          Log.d(TAG, "LocationIsFromMockProvider: " + locationIsFromMockProvider);
           
           callbackContext.success(locationIsFromMockProvider);
         }
@@ -67,11 +67,11 @@ public class detectmocklocation extends CordovaPlugin {
         }
     
         public void onProviderEnabled(String provider) {
-          Log.d(TAG, "onProviderEnabled: " + provider)
+          Log.d(TAG, "onProviderEnabled: " + provider);
         }
     
         public void onProviderDisabled(String provider) {
-          Log.d(TAG, "onProviderDisabled: " + provider)
+          Log.d(TAG, "onProviderDisabled: " + provider);
         }
       };
       
