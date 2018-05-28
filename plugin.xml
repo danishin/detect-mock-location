@@ -13,7 +13,7 @@
     <platform name="android">
         <config-file parent="/*" target="res/xml/config.xml">
             <feature name="detectmocklocation">
-                <param name="android-package" value="com.danishin.detectmocklocation" />
+                <param name="android-package" value="com.danishin.detectmocklocation.DetectMockLocation" />
             </feature>
         </config-file>
         <config-file parent="/*" target="AndroidManifest.xml">
@@ -21,6 +21,6 @@
             <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
             <uses-feature android:name="android.hardware.location.gps" />
         </config-file>
-        <source-file src="src/android/detectmocklocation.java" target-dir="src/com/danishin/detectmocklocation/" />
+        <source-file src="src/android/DetectMockLocation.java" target-dir="src/com/danishin/detectmocklocation/" />
     </platform>
 </plugin>

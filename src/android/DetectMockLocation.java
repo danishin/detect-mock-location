@@ -19,7 +19,7 @@ import org.apache.cordova.CordovaWebView;
 import org.json.JSONArray;
 import org.json.JSONException;
 
-public class detectmocklocation extends CordovaPlugin {
+public class DetectMockLocation extends CordovaPlugin {
   private static final String TAG = "DetectMockLocation";
   
   /* success responses */
