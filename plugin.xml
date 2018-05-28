@@ -12,7 +12,7 @@
     </js-module>
     <platform name="android">
         <config-file parent="/*" target="res/xml/config.xml">
-            <feature name="detectmocklocation">
+            <feature name="DetectMockLocation">
                 <param name="android-package" value="com.danishin.detectmocklocation.DetectMockLocation" />
             </feature>
         </config-file>
