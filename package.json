@@ -1,6 +1,6 @@
 {
   "name": "com.danishin.detect-mock-location",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Detect mocked location for android",
   "cordova": {
     "id": "com.danishin.detect-mock-location",
