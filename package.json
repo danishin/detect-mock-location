@@ -1,0 +1,16 @@
+{
+  "name": "com.danishin.detect-mock-location",
+  "version": "1.0.0",
+  "description": "Detect mocked location for android",
+  "cordova": {
+    "id": "com.danishin.detect-mock-location",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danishin/com.danishin.detect-mock-location.git"
+  },
+  "author": "Daniel Shin"
+}
